@@ -62,9 +62,9 @@ class App extends Component {
             <input type="text" ref={this.roomRef} id="roomTf" />
             <p> please enter your name </p>
             <input type="text" ref={this.nameRef} id="nameTf" />
-            <button onClick={this.createRoom} id="ceateBtn">
+            {/* <button onClick={this.createRoom} id="ceateBtn">
               CREATE ROOM
-            </button>
+            </button> */}
             <button onClick={this.joinRoom} id="joinBtn">
               JOIN ROOM
             </button>
