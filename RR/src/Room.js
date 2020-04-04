@@ -31,12 +31,12 @@ class Room extends Component {
     
     this.socket.on('connection-success', success => {
       
-      if (this.type == "create") { 
+      if (this.type === "create") { 
         var createData = {
           room: this.roomId
         }
         this.sendToServer("createRoom", createData)
-      } else if(this.type == "join") { 
+      } else if(this.type === "join") { 
         var joinData = { 
           room: this.roomId 
         }
