@@ -32,7 +32,7 @@ class Room extends Component {
     this.socket.on('connection-success', success => {
       
       if (this.type === "create") { 
-        var createData = {
+        var createData = { 
           room: this.roomId
         }
         this.sendToServer("createRoom", createData)
