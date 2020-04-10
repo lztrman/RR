@@ -22,7 +22,7 @@ class Room extends Component {
     console.log("this room type is " + this.type)
 
     this.socket = io(
-      '/admin',
+      '/room',
       {
         path: '/webrtc',
         query: {}
