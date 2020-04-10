@@ -58,16 +58,21 @@ class App extends Component {
         );
       case false:
         return (
-          <div>
-            <h1 class = "App">Welcome to Red Rhinoceros! </h1>
-            <p class = "App"> please enter room number </p>
-            <Input class = "App" type="text" ref={this.roomRef} size = "large" value = "Room Number"/>
-            <p class = "App"> please enter your name </p>
-            <Input class = "App" type="text" ref={this.nameRef} size = "large" value = "Your Name"/>
+          <div className = "App">
+            <h1 >Welcome to Red Rhinoceros! </h1>
             <br/>
-            <Button type = "primary" onClick={this.createRoom} id="ceateBtn">
+            <p > please enter room number </p>
+            <Input style = {{width: '30%'}} type="text" ref={this.roomRef} size = "median" value = "Room Number"/>
+            <br/>
+            <br/>
+            <p > please enter your name </p>
+            <Input style = {{width: '30%'}} type="text" ref={this.nameRef} size = "median" value = "Your Name"/>
+            <br/>
+            <br/>
+            <Button type = "primary" onClick={this.createRoom} id="ceateBtn" size = "middle">
               CREATE ROOM
             </Button>
+            <br/>
             <br/>
             <Button type = "primary" onClick={this.joinRoom} id="joinBtn">
               JOIN ROOM
