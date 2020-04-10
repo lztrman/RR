@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import io from 'socket.io-client'
 import Room from "./Room";
+import {Button, Input} from "antd";
+import './App.css';
 
 class App extends Component {
   constructor(props) {
@@ -57,17 +59,20 @@ class App extends Component {
       case false:
         return (
           <div>
-            <h1>Welcome to Red Rhinoceros! </h1>
-            <p> please enter room number </p>
-            <input type="text" ref={this.roomRef} id="roomTf" />
-            <p> please enter your name </p>
-            <input type="text" ref={this.nameRef} id="nameTf" />
-            <button onClick={this.createRoom} id="ceateBtn">
+            <h1 class = "App">Welcome to Red Rhinoceros! </h1>
+            <p class = "App"> please enter room number </p>
+            <Input class = "App" type="text" ref={this.roomRef} size = "large" value = "Room Number"/>
+            <p class = "App"> please enter your name </p>
+            <Input class = "App" type="text" ref={this.nameRef} size = "large" value = "Your Name"/>
+            <br/>
+            <Button type = "primary" onClick={this.createRoom} id="ceateBtn">
               CREATE ROOM
-            </button>
-            <button onClick={this.joinRoom} id="joinBtn">
+            </Button>
+            <br/>
+            <Button type = "primary" onClick={this.joinRoom} id="joinBtn">
               JOIN ROOM
-            </button>
+            </Button>
+            
           </div>
         );
       default:

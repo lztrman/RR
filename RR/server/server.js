@@ -35,10 +35,10 @@ peers.on('connection', socket => {
   
 
   socket.on('createRoom', (data) => {
-    if(rooms.includes(room)) { 
+    if(rooms.includes(data.payload.room)) { 
     //TODO 
     } else { 
-      rooms.push(room)
+      rooms.push(data.payload.room)
       console.log("room number " + data.payload + " was created by " + data.socketID )
       socket.join(data.payload.room) 
       connectedPeers.set(socket.id, {socket:socket, room:data.payload.room})
