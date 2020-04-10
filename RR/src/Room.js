@@ -167,6 +167,8 @@ class Room extends Component {
 
     return (
       <div>
+        <p>{this.roomId}</p>
+        <br></br>
         <video
           style={{
             width: 240,
