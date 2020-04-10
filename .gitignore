@@ -104,3 +104,6 @@ dist
 .tern-port
 
 .DS_Store
+
+# Ignore all of files under build folder
+/RR/build/*
